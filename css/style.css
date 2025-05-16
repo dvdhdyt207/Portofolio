@@ -2727,23 +2727,6 @@ h6 {
     .portfolio_details_inner .portfolio_right_text .list li i {
       color: #f1cd09; }
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: rgba(128, 128, 128, 0.5); /* abu-abu pudar */
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      background-size: 60% 60%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    .carousel-inner img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
     .portfolio_box {
       margin-bottom: 40px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -2752,43 +2735,47 @@ h6 {
       border-radius: 10px;
     }
 
-    /* carosel spk */
-    #carouselSPK .carousel-inner {
-      height: 360px;
-      width: 720px; 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(128, 128, 128, 0.5);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-size: 60% 60%;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
-    #carouselSPK .carousel-inner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    /* carosel freeCodeCamp */
-    #carouselffc .carousel-inner {
-      height: 360px;
-      width: 720px; 
-    }
-
-    #carouselffc .carousel-inner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    /* carosel dw */
+    #carouselSPK .carousel-inner,
+    #carouselffc .carousel-inner,
     #carouseldw .carousel-inner {
-      height: 360px;
-      width: 720px; 
+      width: 720px;
+      max-width: 100%;
+      margin: auto;
     }
 
+    #carouselSPK .carousel-inner .carousel-item,
+    #carouselffc .carousel-inner .carousel-item,
+    #carouseldw .carousel-inner .carousel-item {
+      width: 100%;
+      height: auto;
+    }
+
+    #carouselSPK .carousel-inner img,
+    #carouselffc .carousel-inner img,
     #carouseldw .carousel-inner img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+      height: auto;
+      object-fit: contain;
+      background: #000;
+    }
+
+    @media (max-width: 768px) {
+      #carouselSPK .carousel-inner,
+      #carouselffc .carousel-inner,
+      #carouseldw .carousel-inner {
+        width: 100%;
+      }
     }
 
 
